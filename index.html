@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pikachu Volleyball</title>
-  <script src="./gamecontroller.min.js"></script>
+  <title>Game with Touch</title>
+  <script src="gamecontroller.min.js"></script>
   <style>
     html, body {
       margin: 0;
@@ -23,27 +24,13 @@
     .gc-touch {
       z-index: 9999 !important;
       position: absolute !important;
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(255,255,255,0.3);
       border-radius: 12px;
       padding: 10px;
     }
   </style>
 </head>
 <body>
-  <iframe src="https://lowpowp.github.io/pikachu-volleyball/"></iframe>
-
-  <script>
-    GameController.init({
-      buttons: [
-        { label: "Z", key: "z" },
-        { label: "R", key: "r" },
-        { label: "D", key: "d" },
-        { label: "F", key: "f" },
-        { label: "G", key: "g" }
-      ],
-      force: true,
-      autoShow: true
-    });
-  </script>
+  <iframe src="pikachu.html"></iframe>
 </body>
 </html>
