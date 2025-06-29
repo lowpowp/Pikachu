@@ -10,6 +10,7 @@
       padding: 0;
       height: 100%;
       overflow: hidden;
+      background: #000;
     }
     iframe {
       width: 100%;
@@ -22,21 +23,17 @@
 </head>
 <body>
   <iframe src="https://gorisanson.github.io/pikachu-volleyball/en/"></iframe>
+
   <script>
     GameController.init({
-      controllerLayout: 'dpad+buttons',
-      left: {
-        type: 'dpad',
-        position: { left: '10%', bottom: '20%' },
-        dpad: { radius: 50 }
-      },
-      right: {
-        type: 'buttons',
-        position: { right: '10%', bottom: '20%' },
-        buttons: [
-          { key: ' ', label: 'Jump' }
-        ]
-      }
+      controllerLayout: 'buttons',
+      buttons: [
+        { key: 'z', label: 'Slide', position: { left: '10%', bottom: '20%' } },
+        { key: 'r', label: 'Up',    position: { right: '25%', bottom: '40%' } },
+        { key: 'd', label: 'Left',  position: { left: '20%', bottom: '40%' } },
+        { key: 'f', label: 'Down',  position: { right: '20%', bottom: '20%' } },
+        { key: 'g', label: 'Right', position: { right: '10%', bottom: '30%' } },
+      ]
     });
   </script>
 </body>
