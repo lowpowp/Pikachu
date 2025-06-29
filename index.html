@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/html5-virtual-game-controller/dist/gamecontroller.min.js"></script>
   <style>
     html, body {
@@ -13,27 +13,37 @@
       background: #000;
     }
     iframe {
+      position: absolute;
       width: 100%;
       height: 100%;
       border: none;
-      position: absolute;
       z-index: 0;
+    }
+    .gc-touch {
+      z-index: 9999 !important;
+      position: absolute !important;
+      background: rgba(255,255,255,0.3);
+      border-radius: 12px;
+      padding: 10px;
     }
   </style>
 </head>
 <body>
   <iframe src="https://gorisanson.github.io/pikachu-volleyball/en/"></iframe>
-
   <script>
     GameController.init({
-      controllerLayout: 'buttons',
-      buttons: [
-        { key: 'z', label: 'Slide', position: { left: '10%', bottom: '20%' } },
-        { key: 'r', label: 'Up',    position: { right: '25%', bottom: '40%' } },
-        { key: 'd', label: 'Left',  position: { left: '20%', bottom: '40%' } },
-        { key: 'f', label: 'Down',  position: { right: '20%', bottom: '20%' } },
-        { key: 'g', label: 'Right', position: { right: '10%', bottom: '30%' } },
-      ]
+      controllerLayout: 'dpad+buttons',
+      left: {
+        type: 'buttons',
+        position: { left: '10%', bottom: '20%' },
+        buttons: [
+          { key: 'z', label: 'Z' },
+          { key: 'r', label: 'R' },
+          { key: 'd', label: 'D' },
+          { key: 'f', label: 'F' },
+          { key: 'g', label: 'G' }
+        ]
+      }
     });
   </script>
 </body>
